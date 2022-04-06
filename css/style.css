@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  /* Style the header */
+  header {
+    height: auto;
+    width: auto;
+    background-color: Plum;
+    padding: 24px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+  }
+  
+  section{
+    display: flex;
+    align-items: stretch;
+    width: auto;
+    height: 100%;
+  }
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 20%;
+    height: 550px;
+    background: Thistle;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+
+  nav a:hover{
+    color: #424242;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 80%;
+    height: 550px;
+    background-color: Lavender;
+  }
+
+  i{
+    text-decoration:none;
+    color: purple!important;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+  }
+  
+  tr:hover {background-color: #fbfbfb;}
+  
+  /* Style the footer */
+  footer {
+    clear: both;
+    background-color: Plum;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      margin: 0;
+      height: auto;
+    }
+    nav li{
+      text-align: center;
+    }
+  }
